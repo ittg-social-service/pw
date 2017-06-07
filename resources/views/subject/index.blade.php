@@ -26,7 +26,9 @@
                         <button class="btn-flat red-text"><i class="material-icons">delete_forever</i></button>
                      </td>
                      <td>
-                        <a href="#add-reference-to-subject-modal" class="btn-flat" ng-click="vm.subjectToAddReference = subject"> Agregar referencia</a>
+                        <a href="#add-reference-to-subject-modal" class="btn" ng-click="vm.subjectToAddReference = subject"> Ver referencias</a>
+
+                    
                      </td>
                   </tr>
                 
@@ -108,7 +110,8 @@
                </table>
             </div>
             <div class="modal-footer">
-               <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+
+               <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Hecho</a>
             </div>
          </div>
 	</div>

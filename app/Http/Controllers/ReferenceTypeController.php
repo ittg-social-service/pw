@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\ReferenceType;
 use Illuminate\Http\Request;
 
 class ReferenceTypeController extends Controller
@@ -13,7 +13,7 @@ class ReferenceTypeController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**

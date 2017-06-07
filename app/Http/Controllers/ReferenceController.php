@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\ReferenceType;
 
 use App\Reference;
 
@@ -26,8 +27,13 @@ class ReferenceController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        //
+    {   
+
+        return view('subject.new_reference');
+    }
+    public function allreferencetype(){
+        $referencesType = ReferenceType::all();
+        return response()->json($referencesType->toArray());
     }
 
     /**

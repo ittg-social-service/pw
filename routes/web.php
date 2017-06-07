@@ -27,6 +27,8 @@ Route::get('/subject/{id}/semester', 'SubjectController@getSemester');
 Route::get('/reference/{id}/type', 'ReferenceController@getReferenceType');
 Route::get('/references/all', 'ReferenceController@all');
 
+Route::get('/referencestype/all', 'ReferenceController@allreferencetype');
+
 
 Route::resource('references', 'ReferenceController');
 Route::resource('semesters', 'SemesterController');
