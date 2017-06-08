@@ -32,6 +32,10 @@ Route::get('/references/all', 'ReferenceController@all');
 
 Route::get('/referencestype/all', 'ReferenceController@allreferencetype');
 
+Route::post('/referencestype/store', [
+	'uses' => 'ReferenceTypeController@store',
+	'as' => 'referencetype.store'
+	]);
 
 Route::resource('references', 'ReferenceController');
 Route::resource('semesters', 'SemesterController');
