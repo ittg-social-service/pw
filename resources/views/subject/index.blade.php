@@ -23,7 +23,7 @@
                     <td><% subject.references.length %></td>
                      <td>
                         <a class="btn-flat green-text modal-trigger" href="#update-subject-modal" ng-click="vm.subjectToEdit = subject"><i class="material-icons">mode_edit</i></a>
-                        <button class="btn-flat red-text"><i class="material-icons">delete_forever</i></button>
+                        {{-- <button class="btn-flat red-text"><i class="material-icons">delete_forever</i></button> --}}
                      </td>
                      <td>
                         <a href="#add-reference-to-subject-modal" class="btn" ng-click="vm.subjectToAddReference = subject"> Agregar referencia</a>

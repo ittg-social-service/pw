@@ -26,6 +26,7 @@ Route::get('/subject/{id}/references', 'SubjectController@references');
 Route::get('/subject/{id}/semester', 'SubjectController@getSemester');
 Route::post('/subject/newReference', 'SubjectController@addReference');
 Route::post('/subject/quitReference', 'SubjectController@removeReference');
+Route::get('/subjects/completeList', 'SubjectController@completeList');
 
 Route::get('/reference/{id}/type', 'ReferenceController@getReferenceType');
 Route::get('/references/all', 'ReferenceController@all');

@@ -20,7 +20,7 @@ class SubjectController extends Controller
 
 
     }
-    
+
     public function index()
     {
         return view('subject.index');
@@ -157,5 +157,10 @@ class SubjectController extends Controller
         //$type = Reference::find($id)->referenceType;
 
         return response()->json(["status" => $refType]);   
+    }
+
+    public function completeList()
+    {
+        return view('subject.completeList');
     }
 }
