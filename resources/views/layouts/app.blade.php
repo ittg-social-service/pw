@@ -27,8 +27,8 @@
 <body>
     <div id="app">
         <nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
+    <div class="nav-wrapper" style="background-color: #01579b;">
+      <a href="{{url('/')}}" class="brand-logo">ITTG</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="{{ route('semesters.index') }}">Semestres</a></li>
         <li><a href="{{ route('references.create') }}">Referencias</a></li>

@@ -55,12 +55,43 @@
       <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
     </div>
   </div>
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <h4>Agregar datos de referencia</h4>
+      
+	  <div class="row">
+	    <form class="col s12" method="POST" action="{{route('')}}">
+	      <div class="row">
+	        <div class="input-field col s6">
+	          <input placeholder="Llena este campo" id="description" type="text" class="validate" name="description">
+	          <label for="description">Descripción</label>
+	        </div>
+	        
+	      </div>
+	      
+	      <div class="input-field col s12">
+	      	<input type="submit" value="Registrar" class="btn">	      
+	      </div>
+	    </form>
+	  </div>
+        
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
+    </div>
+  </div>
+
+  <div class="fixed-action-btn horizontal">
+    <a class="btn-floating btn-large red">
+      <i class="large material-icons">mode_edit</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating red tooltipped z-depth-2" data-position="left" data-tooltip="Agregar referencia" href="#modal1" ><i class="material-icons">class</i></a></li>
+      <li><a class="btn-floating red tooltipped z-depth-2" data-position="left" data-tooltip="Agregar nuevo tipo dereferencia" href="#modal2" ><i class="material-icons">subject</i></a></li>
+    </ul>
+  </div>
           
-	<div class="fixed-action-btn">
-             <a class="btn-floating btn-large red" href="#modal1">
-               <i class="large material-icons">add</i>
-             </a>
-           </div>
+	
 </div>
 
 <script>
