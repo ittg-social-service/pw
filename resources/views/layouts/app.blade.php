@@ -11,13 +11,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
     
     <link rel="stylesheet" href="/css/main.css">
-<<<<<<< HEAD
-   
-=======
-    <!-- Styles -->
-{{--     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
- --}}
->>>>>>> 42cdb69937f45f45bac05b2250639a18628394cb
+
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
@@ -99,7 +93,7 @@
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                            Logout
+                                            Salir
                                         </a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

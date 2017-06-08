@@ -87,7 +87,7 @@
                     <img src="/images/tec.png" alt="" class="tec-img">
                 <div class="title m-b-md">
                 
-                    Programacion web
+                    Programación web
                 </div>
 
               {{--   <div class="links">

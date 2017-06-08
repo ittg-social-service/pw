@@ -44,6 +44,7 @@ angular.module('Semester', ['common'], function($interpolateProvider) {
 	vm.title = "mas";
 	vm.subjects = [];
 	vm.semesters = [];
+	vm.reverse = false;
 
 	API.getSemesters().then(function successCallback(response) {
 	    vm.semesters = response.data;
