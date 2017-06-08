@@ -4,8 +4,8 @@
 <div ng-app="Semester">
 	<div ng-controller="subjectController as vm">
 		<div class="row">
-        <div class="col m12">
-            <table>
+        <div class="col m8 offset-m2">
+            <table class="bordered  my-table z-depth-1 centered">
                 <thead>
                   <tr>
                       <th>Clave</th>

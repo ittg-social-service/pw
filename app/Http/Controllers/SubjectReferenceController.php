@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Reference;
+use App\Subject;
 use Illuminate\Http\Request;
 
 class SubjectReferenceController extends Controller
@@ -21,7 +22,7 @@ class SubjectReferenceController extends Controller
 
     public function index()
     {
-        //
+
     }
 
     /**
@@ -53,7 +54,9 @@ class SubjectReferenceController extends Controller
      */
     public function show($id)
     {
-        //
+        $reference = Reference::find($id);
+        $subjects = $reference->subjects;
+        return view('reference.subjects',['subjects'=>$subjects]);
     }
 
     /**

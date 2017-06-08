@@ -10,4 +10,8 @@ class Reference extends Model
     {
         return $this->belongsTo('App\ReferenceType');
     }
+    public function subjects()
+    {
+      return $this->belongsToMany('App\Subject');
+    }
 }

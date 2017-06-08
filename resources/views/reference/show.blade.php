@@ -27,9 +27,9 @@
       @foreach ($types as $type)
         <p>
           <input type='radio' value='{{$type->id}}' name='reference_type_id' id="{{$type->id}}"/>
-          <label for='{{$type->id}}'>{{$type->description}}</label>
+          <label for='{{$type->id}}'>{{$type->type}}</label>
         </p>
-        <input type="radio" name="reference_type_id" value="{{$type->id}}">{{$type->type}}
+
       @endforeach
 
   </div>

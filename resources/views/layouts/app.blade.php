@@ -11,7 +11,13 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
     
     <link rel="stylesheet" href="/css/main.css">
+<<<<<<< HEAD
    
+=======
+    <!-- Styles -->
+{{--     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+ --}}
+>>>>>>> 42cdb69937f45f45bac05b2250639a18628394cb
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
@@ -118,7 +124,7 @@
   @endif
         <!--nav class="navbar navbar-default navbar-static-top">
             <div class="container">
-                
+
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <Left Side Of Navbar >
@@ -126,7 +132,7 @@
                         &nbsp;
                     </ul>
 
-                    
+
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         {{-- @if (Auth::guest())
@@ -162,6 +168,7 @@
     </div>
 
     <!-- Scripts -->
+    
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

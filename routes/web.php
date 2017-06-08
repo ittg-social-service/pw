@@ -37,7 +37,10 @@ Route::post('/referencestype/store', [
 	'uses' => 'ReferenceTypeController@store',
 	'as' => 'referencetype.store'
 	]);
-
+Route::get('subjectsrelated/{id}',[
+  'uses' => 'SubjectReferenceController@show',
+  'as' => 'allsubjectsrelated'
+]);
 Route::resource('references', 'ReferenceController');
 Route::resource('semesters', 'SemesterController');
 Route::resource('subjects', 'SubjectController');
