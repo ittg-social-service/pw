@@ -30,6 +30,9 @@
 								<td>
 									<a href="{{route('references.show',$reference->id)}}" class="btn waves-effect">Editar</a>
 								</td>
+								<td>
+									<a href="{{route('allsubjectsrelated',$reference->id)}}" class="">Materias relacionadas</a>
+								</td>
 								<!--td>
 
 								</td-->
