@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Subject;
 use App\Semester;
-
+use App\ReferenceSubject;
 class SubjectController extends Controller
 {
     /**
@@ -14,6 +14,13 @@ class SubjectController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+   public function __construct()
+    {
+        $this->middleware('auth');
+
+
+    }
+    
     public function index()
     {
         return view('subject.index');
@@ -122,5 +129,33 @@ class SubjectController extends Controller
         $semester = Subject::find($id)->semester;
 
         return response()->json($semester->toArray());
+    }
+
+        public function addReference(Request $request)
+    {
+
+        $refType = new ReferenceSubject;
+        $refType->subject_id = $request->id;
+        $refType->reference_id = $request->reference_id;
+
+        $refType->save();
+        //$type = Reference::find($id)->referenceType;
+
+        return response()->json(["status" => 1]);   
+    }
+
+    public function removeReference(Request $request)
+    {
+
+        $refType = ReferenceSubject::where([
+                ['subject_id', '=', $request->id],
+                ['reference_id', '=', $request->reference_id]
+            ])->first();
+    
+
+        $refType->delete();
+        //$type = Reference::find($id)->referenceType;
+
+        return response()->json(["status" => $refType]);   
     }
 }

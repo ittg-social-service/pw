@@ -52,6 +52,27 @@ angular.module('common',[])
         })
     }
 
+    this.addReferenceToSubject = function (subject, ref) {
+      return $http({ 
+        method: 'POST',
+        url: '/subject/newReference',
+          headers: {
+              'X-CSRF-TOKEN': this.token
+            },
+          data: {'id': subject, 'reference_id': ref} 
+        })
+    }
+     this.removeReferenceToSubject = function (subject, ref) {
+      return $http({ 
+        method: 'POST',
+        url: '/subject/quitReference',
+          headers: {
+              'X-CSRF-TOKEN': this.token
+            },
+          data: {'id': subject, 'reference_id': ref} 
+        })
+    }
+
     /*
       REFERENCIAS
     */

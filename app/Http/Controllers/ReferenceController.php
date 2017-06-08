@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\ReferenceType;
+use App\SubjectReference;
 
 use App\Reference;
 
@@ -14,6 +15,12 @@ class ReferenceController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+       public function __construct()
+    {
+        $this->middleware('auth');
+
+
+    }
     public function index()
     {
         $references = Reference::all();
@@ -120,4 +127,6 @@ class ReferenceController extends Controller
 
         return response()->json($type->toArray());
     }
+
+
 }

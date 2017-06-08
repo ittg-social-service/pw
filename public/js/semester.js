@@ -64,6 +64,14 @@ angular.module('Semester', ['common'], function($interpolateProvider) {
 		    	API.getReferencesForSubject(subject.id).then(function  (response) {
 		    		subject.references = response.data;
 		    		console.log(subject);
+		    		if (vm.subjectToAddReference) {
+		    			if (vm.subjectToAddReference.id == subject.id) {
+		    				vm.subjectToAddReference = subject;
+		    			}
+		    		
+						console.log("vm.subjectToAddReference");
+						console.log(vm.subjectToAddReference);
+		    		}
 		    	});
 		    })
 		    
@@ -110,6 +118,27 @@ angular.module('Semester', ['common'], function($interpolateProvider) {
 				API.makeToast("Materia actualizada", 2);
 				getSubjects();
 			}
+		});
+	}
+
+
+	vm.addReferenceToSubject = function (subject, ref) {
+		API.addReferenceToSubject(subject.id, ref.id).then(function  (response) {
+			console.log(response.data);
+			API.makeToast("Referencia agregada");
+			getSubjects();
+		
+			getReferences();
+		});
+	}
+
+	vm.removeReferenceToSubject = function (subject, ref) {
+		API.removeReferenceToSubject(subject.id, ref.id).then(function  (response) {
+			console.log("response.data");
+			console.log(response.data);
+			API.makeToast("Referencia removida");
+			getSubjects();
+			getReferences();
 		});
 	}
 }]);
