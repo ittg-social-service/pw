@@ -12,7 +12,7 @@
 
     <!-- Styles -->
 {{--     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
- --}}     
+ --}}
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
@@ -54,7 +54,7 @@
   </nav>
         <!--nav class="navbar navbar-default navbar-static-top">
             <div class="container">
-                
+
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <Left Side Of Navbar >
@@ -62,7 +62,7 @@
                         &nbsp;
                     </ul>
 
-                    
+
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         {{-- @if (Auth::guest())
@@ -98,6 +98,7 @@
     </div>
 
     <!-- Scripts -->
+    
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
