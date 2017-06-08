@@ -26,7 +26,7 @@
                         <button class="btn-flat red-text"><i class="material-icons">delete_forever</i></button>
                      </td>
                      <td>
-                        <a href="#add-reference-to-subject-modal" class="btn" ng-click="vm.subjectToAddReference = subject"> Ver referencias</a>
+                        <a href="#add-reference-to-subject-modal" class="btn" ng-click="vm.subjectToAddReference = subject"> Agregar referencia</a>
 
                     
                      </td>
@@ -100,10 +100,14 @@
                         <td ><% reference.existence %></td>
                         <td><% reference.type.type %></td>
                         <td>
-                           <button class="btn-flat green-text" ng-disabled="reference.id == vm.subjectToAddReference.references[$index].id">
+                           <button class="btn-flat green-text" ng-hide="reference.id == vm.subjectToAddReference.references[$index].id" ng-click="vm.addReferenceToSubject(vm.subjectToAddReference, reference)">
                               <i class="material-icons">add</i>
                            </button>
+                           <button class="btn-flat red-text" ng-show="reference.id == vm.subjectToAddReference.references[$index].id" ng-click="vm.removeReferenceToSubject(vm.subjectToAddReference, reference)">
+                              -
+                           </button>
                         </td>
+                   
                       </tr>
                  
                     </tbody>

@@ -13,6 +13,7 @@
 
 Route::get('/', function () {
     return view('welcome');
+    return view('welcome');
 });
 
 Auth::routes();
@@ -23,6 +24,8 @@ Route::get('/semester/{id}/subjects', 'SemesterController@subjects');
 Route::get('/subject/all', 'SubjectController@all');
 Route::get('/subject/{id}/references', 'SubjectController@references');
 Route::get('/subject/{id}/semester', 'SubjectController@getSemester');
+Route::post('/subject/newReference', 'SubjectController@addReference');
+Route::post('/subject/quitReference', 'SubjectController@removeReference');
 
 Route::get('/reference/{id}/type', 'ReferenceController@getReferenceType');
 Route::get('/references/all', 'ReferenceController@all');

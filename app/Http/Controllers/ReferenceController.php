@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\ReferenceType;
+use App\SubjectReference;
 
 use App\Reference;
 
@@ -105,4 +106,6 @@ class ReferenceController extends Controller
 
         return response()->json($type->toArray());   
     }
+
+
 }
