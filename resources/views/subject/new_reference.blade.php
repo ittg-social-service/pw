@@ -4,7 +4,7 @@
 <div class="row">
 	<div class="col s12">
 		<h4>Referencias</h4>
-		 <table>
+		 <table class="table striped">
 	        <thead>
 	          <tr>
 	              <th>Descripción</th>
