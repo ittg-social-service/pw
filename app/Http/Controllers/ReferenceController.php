@@ -27,9 +27,10 @@ class ReferenceController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {   
-
-        return view('subject.new_reference');
+    {
+        $types = ReferenceType::all();
+        $references = Reference::all();
+        return view('subject.new_reference',['references'=>$references,'types'=>$types]);
     }
     public function allreferencetype(){
         $referencesType = ReferenceType::all();
@@ -44,7 +45,12 @@ class ReferenceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $newRefence = new Reference;
+        $newRefence->description = $request->description;
+        $newRefence->existence = $request->existence;
+        $newRefence->reference_type_id = $request->reference_type_id;
+        $newRefence->save();
+        return redirect()->route('references.create');
     }
 
     /**
@@ -55,7 +61,9 @@ class ReferenceController extends Controller
      */
     public function show($id)
     {
-        //
+        $types = ReferenceType::all();
+        $reference = Reference::findOrFail($id);
+        return view('reference.show',['reference'=>$reference,'types'=>$types]);
     }
 
     /**
@@ -78,7 +86,12 @@ class ReferenceController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $reference = Reference::find($id);
+        $reference->description = $request->description;
+        $reference->existence = $request->existence;
+        $reference->reference_type_id = $request->reference_type_id;
+        $reference->save();
+        return redirect()->route('references.create');
     }
 
     /**
@@ -89,20 +102,22 @@ class ReferenceController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $reference = Reference::find($id);
+        $reference->delete();
+        return redirect()->route('references.create');
     }
 
      public function all()
     {
         $references = Reference::all();
 
-        return response()->json($references->toArray()); 
+        return response()->json($references->toArray());
     }
 
     public function getReferenceType($id)
     {
         $type = Reference::find($id)->referenceType;
 
-        return response()->json($type->toArray());   
+        return response()->json($type->toArray());
     }
 }

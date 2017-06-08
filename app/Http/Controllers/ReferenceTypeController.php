@@ -13,7 +13,7 @@ class ReferenceTypeController extends Controller
      */
     public function index()
     {
-        
+
     }
 
     /**
@@ -34,12 +34,17 @@ class ReferenceTypeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $typeRefenrece = new ReferenceType;
+        $typeRefenrece->type = $request->type;
+        $typeRefenrece->save();
+        return redirect()->route('references.create');
     }
 
     /**
      * Display the specified resource.
-     *
+     *$subject = new Subject;
+
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
